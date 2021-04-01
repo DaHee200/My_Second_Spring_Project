@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--<html lang="en">-->
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>글 수정</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link rel="stylesheet" href="/css/write.css">
+    <link rel="stylesheet" href="/write.js">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+
+    <style>
+
+</style>
+</head>
+
+<body>
+<nav class="navbar-dark">
+    <a class="main-navbar" href="/">Spring </a>   |
+    <!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">-->
+    <!--        <span class="navbar-toggler-icon"></span>-->
+    <!--    </button>-->
+
+    <div class="navbar-collapse" id="navbarColor02">
+        <div class="colapse02">     |
+            <div class="nav-item">
+                <a class="nav-link" href="login.html">로그인</a>  |
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="private.html">로그아웃</a>  |
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="/content/write">글쓰기</a>  |
+
+
+            </div>
+        </div>
+
+
+        <form class="search" >
+            <div class="search1">
+                <input class="search" type="text" placeholder="Search">
+                <button class="search" type="submit">Search</button>
+            </div>
+        </form>
+    </div>
+</nav>
+<div id="post-box" class="form-post">
+    <div class="card">
+        <div class="card-body">
+            <label for="title" class="form-control">제목</label>
+            <input id="title" class="form-control" placeholder="수정할 제목을 입력해주세요.">
+            <!--                                    <button location.href="/">돌아가기</button>-->
+            <!--                <a href="/">봄봄봄</a>-->
+            </h5>
+            <textarea id="content" class="form-control" rows="3" placeholder="내용을 입력해주세요."></textarea>
+            <p id="name" class="name">
+                임다희
+                <span th:text="${username}"  ></span><span id="modified" class="metadata" >|2021-03-30</span>
+            </p>
+
+            <div class="btns">
+                <img class="cursor1" src="images/send.png" alt="" onclick="writePost()">
+                <img class="cursor2" src="images/delete.png" alt="" onclick="deleteOne('${id}')">
+                <img class="cursor3" src="images/done.png" alt="" onclick="submitEdit('${id}')">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--<h2> 게시글 작성 </h2>-->
+
+<!--<div class="container">-->
+<!--    <form action="/insertProc" method="post">-->
+<!--        <div class="form-group">-->
+<!--            <label for="subject">제목</label>-->
+<!--            <input type="text" class="form-control" id="subject" name="subject" placeholder="제목을 입력하세요.">-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <label for="writer">작성자</label>-->
+<!--            <input type="text" class="form-control" id="writer" name="writer" placeholder="내용을 입력하세요.">-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <label for=content">내용</label>-->
+<!--            <textarea class="form-control" id="content" name="content" rows="3"></textarea>-->
+<!--        </div>-->
+<!--        <button type="submit" class="btn btn-primary">작성</button>-->
+<!--    </form>-->
+<!--</div>-->
+
+
+
+</body>
+</html>

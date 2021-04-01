@@ -1,0 +1,97 @@
+body {
+    font-family: 'Jua', sans-serif;
+    font-size: 20px;
+    background-color: #f8f5e2;
+}
+
+.navbar-dark {
+
+    background-color: #060606 !important;
+    border: 1px solid #282828;
+    align-content: center;
+    display: flex;
+    text-wrap: inherit;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    flex-direction: row;
+    padding: 30px;
+
+
+
+}
+.colapse02{
+
+    display: flex;
+    font-size: 15px;
+}
+
+.main-navbar{
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+}
+.navbar-collapse{
+    width: 400px;
+    margin-left: 10px;
+    float: left;
+}
+
+.navbar-dark  a{
+    color: white;
+    text-decoration: none;
+}
+
+.search1 {
+    align-content: space-between;
+    font-family: 'Lobster', cursive;
+    font-size: 14px;
+    justify-content: space-between;
+    margin-left: 100px;
+    width: 100px;
+}
+
+.search div{
+    width: 230px;
+    overflow: hidden;
+    /*background-color: green;*/
+    margin: 0 auto auto 1260px;
+    position:fixed;
+    left:0;
+    top:40px;
+    z-index:1;
+    paddingRight:20;
+    vertical-align: top;
+
+
+}
+
+
+input, button, select, optgroup, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.card {
+    margin-top: 30px;
+    background-color: #ffffff;
+    text-align: center;
+    border:2px solid #666;
+    font-family: 'Jua', sans-serif;
+
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+.form-control{
+    margin-bottom: 5px;
+    margin-top: 50px;
+}
+.name{
+    margin-top: 10px;
+}

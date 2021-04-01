@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>스프링 블로그</title>
+    <meta property="og:title" content="스프링 블로그">
+    <meta property="og:description" content="스프링하는 사람들의 모임">
+    <meta property="og:image" content="">
+    <link rel="stylesheet" href="/resource/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/basic.js">
+    <link rel="stylesheet" href="/content.js">
+<!--    <script src="index.js"></script>-->
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+<nav class="navbar-dark">
+    <a class="main-navbar" href="/">Spring Blog</a>   |
+<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+
+    <div class="navbar-collapse" id="navbarColor02">
+        <div class="colapse02">     |
+            <div class="nav-item">
+                <a class="nav-link" href="/user/login">로그인</a>  |
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="/user/logout">로그아웃</a>  |
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="/content/write">글쓰기</a>  |
+<!--                안녕하세요 <span th:text="${username}"></span>님-->
+            </div>
+
+            </div>
+        </div>
+
+
+        <form class="search">
+            <div class="search1">
+                <input class="search" type="text" placeholder="Search">
+                <button class="search" type="submit">Search</button>
+            </div>
+        </form>
+    </div>
+</nav>
+
+
+
+<!--전체 게시판 목록 -->
+<table class="content" border="1" cellspacing="0" summary="게시판의 글제목 리스트">
+    <caption>게시판 리스트</caption>
+    <colgroup>
+        <col width="60%">
+        <col width="15%">
+        <col width="20%">
+    </colgroup>
+    <thead>
+    <tr class="table-top">
+        <th scope="col">제목</th>
+        <th scope="col">작성자</th>
+        <th scope="col">날짜</th>
+    </tr>
+    </thead>
+    <div id="save">
+        <tbody id="board-box" class="mini">
+        <tr>
+            <td class="title">
+                <a id="${id}-title" href="/api/private/{id}">봄봄봄</a>
+            </td>
+            <td id="${id}-userid" class="userid">작성자</td>
+            <td id="${id}-date" class="date">2021-03-25<br>12:34:56</td>
+        </tr>
+        <!-- tr이 제목 1줄입니다 보일 list 갯수만큼 li반복합니다.-->
+        </tbody>
+    </div>
+
+</table>
+
+<!-- 리스트 게시판 끝-->
+
+</body>
+</html>

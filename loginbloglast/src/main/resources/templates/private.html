@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>스프링 블로그</title>
+    <link rel="stylesheet" href="/css/private.css">
+    <link rel="stylesheet" href="/basic.js">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+<nav class="navbar-dark">
+    <a class="main-navbar" href="/">Private</a> |
+    <!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">-->
+    <!--        <span class="navbar-toggler-icon"></span>-->
+    <!--    </button>-->
+
+    <div class="navbar-collapse" id="navbarColor02">
+        <div class="colapse02"> |
+            <div class="nav-item">
+                <a class="nav-link" href="login.html">로그인</a> |
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="private.html">로그아웃</a> |
+            </div>
+            <div class="nav-item">
+                <button onclick="writecontent(${id}).style.display='block'" class="nav-item"/>
+                <p> 글쓰기</p>
+
+
+            </div>
+        </div>
+
+
+        <form class="search">
+            <div class="search1">
+                <input class="search" type="text" placeholder="Search">
+                <button class="search" type="submit">Search</button>
+            </div>
+        </form>
+    </div>
+</nav>
+<div id="post-box" class="form-post">
+    <div class="card">
+        <div class="board-box">
+            <h5 id="title1" class="">
+                <!--                                    <button location.href="/">돌아가기</button>-->
+                봄봄봄
+            </h5>
+            <p id="content" class="text">🌸🌸🌸</p>
+            <p id=name" class="name">봄개발자<span class="metadata">|2021-03-30</span></p>
+            <img id="1-edit" onclick="editPost('1')" class="icon-start-edit" src="images/edit.png" alt="">
+            <img id="1-delete" onclick="deleteOne('1')" class="icon-delete" src="images/delete.png" alt="">
+        </div>
+
+    </div>
+</div>
+
+<!--   모달 창 띄우기 -->
+
+</div>
+<div class="is-top">
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container">
+                <span onclick="document.getElementById('id01').style.display='none'"
+                      class="w3-button w3-display-topright">&times;</span>
+                <div class="test">
+                    title : <input id='title' placeholder="제목" type='title'/><br>
+                    contents : <input class="field" placeholder="남기고 싶은 말" name="contents" id="contents" cols="30"
+                                      rows="10">
+                    <p>name : <input id='name' placeholder="이름" type='name'/></p>
+                    <img class="cursor" src="images/send.png" alt="" onclick="writePost()">
+                    <div class="boxs" id="boxs">
+                        <!--    <input type="button" onclick="GoToMain" value="버튼 이동">-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div>
+
+</body>
+</html>
